@@ -1,0 +1,31 @@
+import { From } from "./Form";
+import { GenerationGameIndex } from "./GenerationGameIndex ";
+import { Move } from "./Move";
+import { PokemonAbility } from "./PokemonAbility";
+import { PokemonHeldItem } from "./PokemonHeldItem";
+import { PokemonNamedAPIResource } from "./PokemonNamedAPIResource";
+import { PokemonStat } from "./PokemonStat";
+import { PokemonType } from "./PokemonType";
+import { Sprites } from "./Sprites";
+import { TypePast } from "./TypePast";
+
+export type Resource = {
+  id: number;
+  name: string;
+  base_experience: number;
+  height: number;
+  is_default: boolean;
+  order: number;
+  weight: number;
+  abilities: PokemonAbility[];
+  forms: From[];
+  game_indices: GenerationGameIndex[];
+  held_items: PokemonHeldItem[];
+  location_area_encounters: string;
+  moves: Move[];
+  past_types: TypePast[];
+  sprites: Sprites;
+  species: PokemonNamedAPIResource;
+  stats: PokemonStat[];
+  types: PokemonType[];
+};
